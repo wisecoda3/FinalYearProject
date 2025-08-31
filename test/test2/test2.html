@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donation Platform</title>
+  <link rel="stylesheet" href="test2.css" />
+</head>
+<body>
+
+  <h1>Donation Platform</h1>
+  
+  <!-- 🔐 Authentication Section -->
+  <div id="auth-section">
+    <p id="auth-status">You are not signed in.</p>
+
+    <input type="email" id="email" placeholder="Email" />
+    <input type="password" id="password" placeholder="Password" />
+
+    <button onclick="signUp()">Sign Up</button>
+    <button onclick="signIn()">Sign In</button>
+    <button id="signOutBtn" style="display: none;">Sign Out</button>
+  </div>
+
+  <hr />
+
+  <!-- 💌 Donation Request Section -->
+   <div class="herosec">
+    <div class="herosecleft"><div class="bigtxtclass">Helping those in need, one donation at a time.</div>
+    Join us in bringing hope, compassion, and opportunity to those who need it most. Together, we can create brighter futures, transform communities, and make a lasting difference in the world.
+  
+    <div class="buttonsec">
+  <button class="commonbutton">Donate Now</button>
+  <button class="commonbutton">Contact Us</button>
+</div>
+
+  </div>
+    
+    <!-- <h2>Helping those in need, one donation at a time.</h2> -->
+    <img src="/assets/chilgimg.png" alt="" class="topimg"> 
+
+   </div>
+
+
+   <div class="aboutsec">
+    <div class="aboutsecleft">
+      About Us
+      <div class="bigtxtclass">Driven by Compassion, Committed to Change</div>
+
+      "At HOPE BRIDGE , we are dedicated to bringing hope, compassion, and opportunity to those who need it most. With your support, we can uplift lives, deliver essential resources, and open the door to brighter futures. Together, we can transform communities, empower individuals, and create lasting change that will resonate for generations to come.
+
+Through collaborative efforts, we focus on providing education, healthcare, and essential resources to those in need, empowering them to build sustainable futures.
+
+      <button class="commonbutton"> Learn More</button>
+    </div>
+    <div class="aboutsecright">
+
+    <div class="aboutsecrightimg1">
+      <img src="/assets/man1.jpg" alt="" class="abtsecimg"> 
+      <div class="abtbox"></div>
+    </div>
+
+
+    <div class="aboutsecrightimg2">
+      <img src="/assets/man2.jpg" alt="" class="abtsecimg"> 
+      <div class="abtbox"></div>
+    </div>
+
+  
+
+
+
+  </div>
+
+
+   </div>
+
+
+   
+
+
+
+  <div id="donation-request" style="display: none;" class="supersubmitsec">
+    <div class="submitsec">
+      <div class="bigtxtclass">Submit a Donation Request</div>
+    <!-- <h2>Submit a Donation Request</h2> -->
+    <form id="requestForm">
+      <input type="text" id="requesterName" placeholder="Your Name" required />
+      <input type="text" id="requestReason" placeholder="Reason for Request" required />
+      <input type="number" id="requestAmount" placeholder="Amount Needed" required />
+      <button type="submit">Submit Request</button>
+    </form>
+  </div>
+  </div>
+
+
+  <hr />
+
+  <!-- 📋 List of Requests -->
+   requests
+  <div id="requestList">
+    <h2>Requests</h2>
+    <!-- Request cards will be added here -->
+  </div>
+
+  <div class="contactsec">
+    <div class="contactsectop">
+    Contact Us
+    <div class="bigtxtclass">Get in Touch to Spread Hope</div>
+
+  </div>
+
+
+
+    <div class="contactsecbtm">
+    <div class="contactsecleft">
+      
+      
+      <img src="/assets/kids smile.jpg" alt="" class="contactpic">
+
+      
+    </div>
+    <div class="contactsecright">
+
+      <div class="contactsecrighttop">
+
+      </div>
+
+        <form action="" class="contactsecrightbtm">
+
+          <div class="contactsecrightbtm">
+
+          <input type="text" id="contactsecinputshort" placeholder="First Name" required />
+          <input type="text" id="contactsecinputshort" placeholder="Second Name" required />
+          <input type="text" id="contactsecinputshort" placeholder="Phone Number" required />
+          <input type="text" id="contactsecinputshort" placeholder="Email" required />
+          <input type="number" id="contactsecinputlong" placeholder="Amount Needed" required />
+          <button type="submit" id="contactsecinputlong">Submit Request</button>
+
+          
+            </div>
+
+        </form>
+
+
+
+
+  
+
+
+
+  </div>
+
+</div>
+
+
+   </div>
+
+  <!-- 🔥 Import app logic as ES module -->
+  <script type="module" src="test2.js"></script>
+
+</body>
+</html>
