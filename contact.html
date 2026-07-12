@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="test2.css" />
+  </head>
+  <body>
+    <!-- Navbar-start:: -->
+    <div id="navbar-placeholder"></div>
+    <!-- Navbar-end:: -->
+
+    <!-- using-AboutHeroPage-start -->
+    <main id="AboutHeroPage" style="background-color: rgb(247, 244, 232)">
+      <h1 style="color: black">Get in Touch</h1>
+      <p style="color: black">
+        Have questions or want to get involved? We'd love to hear from you.
+        Reach out and let's make a difference together.
+      </p>
+    </main>
+    <!-- using-AboutHeroPage-end -->
+
+    <section id="ContactSection">
+      <article id="FormInput">
+        <h3>Send Us a Message</h3>
+        <form action="#">
+          <!-- firstName-start:: -->
+          <label for="Name">Your Name</label>
+          <input type="text" id="Name" name="Name" required />
+          <!-- firstName-end:: -->
+
+          <!-- email-start:: -->
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required />
+          <!-- email-end:: -->
+
+          <!-- subject-start:: -->
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required />
+          <!-- subject-end:: -->
+
+          <!-- message-start -->
+          <label for="message">Message</label>
+          <textarea name="message" id="message"></textarea>
+          <!-- message-end -->
+
+          <!--  -->
+          <input type="submit" value="SendMessage" />
+        </form>
+      </article>
+
+      <article id="ContactInfo">
+        <h3>Contact Information</h3>
+        <p>
+          Whether you have questions about our programs, want to volunteer, or
+          are interested in partnering with us, we're here to help.
+        </p>
+        <div class="officeaddress">
+          <h3>Office Address</h3>
+          <p>
+            123 Hope Street
+            <br />
+            New York, NY 10001
+            <br />
+            United States
+          </p>
+        </div>
+
+        <div class="phonenumber">
+          <h3>Phone Number</h3>
+          <p>
+            +1 (555) 123-4567
+            <br />
+            Mon-Fri: 9:00 AM - 6:00 PM EST
+          </p>
+        </div>
+
+        <div class="emailaddress">
+          <h3>Email Address</h3>
+          <p>
+            info@hopegiver.org
+            <br />
+            support@hopegiver.org
+          </p>
+        </div>
+      </article>
+    </section>
+    <!--  -->
+
+    <!-- footer-start:: -->
+    <div id="footer-placeholder"></div>
+    <!-- footer-end:: -->
+     <script type="module" src="test2.js"></script>
+
+    <script>
+const navData = document.getElementById("navbar-placeholder");
+const footerData = document.getElementById("footer-placeholder");
+
+fetch("navbar.html")
+    .then((response) => response.text())
+    .then((data) => {
+
+        navData.innerHTML = data;
+
+        initializeNavbar();
+
+    })
+    .catch((error) => {
+        console.error("Error loading navbar:", error);
+    });
+
+fetch("footer.html")
+    .then((response) => response.text())
+    .then((data) => {
+
+        footerData.innerHTML = data;
+
+    })
+    .catch((error) => {
+        console.error("Error loading footer:", error);
+    });
+</script>
+  </body>
+</html>

@@ -1,148 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donation Platform</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f3e4;
-            text-align: center;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="test2.css" /> -->
+    <!--My-💊-start::  -->
+    <script
+      src="https://kit.fontawesome.com/32a5828b61.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--My-💊-end::  -->
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Navbar-start:: -->
+    <div id="navbar-placeholder"></div>
+    <!-- Navbar-end:: -->
+    <!-- Hero-Page-start -->
 
-        header {
-            background: #1e2841;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
+    <main id="HeroPage">
+      <div class="HeroWriteUp">
+        <div class="Join">Join Our Mission</div>
+        <h1>Together, We Have the Power to Change Lives.</h1>
+        <p>
+          Every donation brings hope, education, and a brighter future to
+          children and families in need. Join us in making a lasting difference.
+        </p>
+        <div class="buttons">
+        <a href="donate.html" id="DonateBtn">Donate Today</a>
+        <a href="about.html" id="LearnBtn">Learn More</a>
+        </div>
+      </div>
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
+      <div class="HeroImage"></div>
+    </main>
+    <!-- Hero-Page-end -->
 
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
+    <!-- next-section-start -->
+    <section id="DrivenSection">
+      <div class="DriveSectionWriteUp">
+        <h2>Driven by Compassion, Committed to Change</h2>
+        <p>
+          For over two decades, we've been dedicated to transforming lives
+          through sustainable development programs. Our mission is to create
+          lasting change by empowering communities with the resources and
+          support they need to thrive.
+        </p>
+        <p>
+          We believe that every child deserves access to education, healthcare,
+          and a safe environment. Through our comprehensive programs, we work
+          alongside communities to break the cycle of poverty and build a
+          foundation for a brighter future.
+        </p>
+      </div>
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        section {
-            background: none;
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 10px;
-            width: 90%;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        button {
-            background: #007bff;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-
-        button:hover {
-            background: #0056b3;
-        }
-
-        /* Forms */
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            width: 50%;
-            margin: auto;
-        }
-
-        input {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        /* Footer */
-        footer {
-            background: #007bff;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Welcome to the Donation Platform</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#donate">Donate</a></li>
-                <li><a href="#requests">Requests</a></li>
-                <li><a href="#login">Login</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="home">
-        <h2>Helping those in need, one donation at a time.</h2>
-        <img src="/assets/chilgimg.png" alt="">
+      <div class="DriveSectionImageContainer">
+        <div class="DriveImage1"></div>
+        <div class="DriveImage2"></div>
+      </div>
     </section>
-    
-    <section id="donate">
-        <h2>Make a Donation</h2>
-        <form id="donationForm">
-            <input type="text" id="donorName" placeholder="Your Name" required>
-            <input type="number" id="donationAmount" placeholder="Amount ($)" required>
-            <button type="submit">Donate</button>
-        </form>
-        <div id="donationList"></div>
-    </section>
-    
-    <section id="requests">
-        <h2>Donation Requests</h2>
-        <ul id="requestList"></ul>
-    </section>
-    
-    <section id="login">
-        <h2>Login</h2>
-        <form id="loginForm">
-            <input type="email" id="loginEmail" placeholder="Email" required>
-            <input type="password" id="loginPassword" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
-        <p id="userStatus">Not logged in</p>
-        <button id="logoutBtn" style="display:none;">Logout</button>
+    <!-- next-section-end -->
 
-        <button id="notlogoutBtn" >Bs</button>
+    <!-- our-programs-start -->
+<section id="how-it-works">
+
+    <div class="section-header">
+        <h2>How It Works</h2>
+        <p>
+            Supporting a cause has never been easier. Follow these simple steps
+            to make a difference.
+        </p>
+    </div>
+
+    <div class="steps-container">
+
+        <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Create a Request</h3>
+            <p>
+                Register an account and submit a donation request by providing
+                your fundraising goal and explaining your cause.
+            </p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Donate Securely</h3>
+            <p>
+                Browse active donation requests, choose a campaign you want to
+                support, and donate using your preferred payment method.
+            </p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Track Progress</h3>
+            <p>
+                Watch donation progress update in real time as campaigns move
+                closer to reaching their funding goals.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+        
+        <!--  -->
+    <!-- our-programs-end -->
+
+    <!-- Your-Trust-start -->
+    <section id="OurMissionContainer">
+      <div class="OurMissionImage"></div>
+      <div class="OurMissionImageWriteUp">
+        <h2>Your Trust, Our Mission for a Better Tomorrow</h2>
+        <p>
+          With the support of generous donors like you, we've been able to reach
+          millions of lives across the globe. Every contribution makes a
+          measurable difference.
+        </p>
+        <div class="OurMissionComplete">
+          <div class="MissionOne">
+            <h3>125,165+</h3>
+            <p>Lives Impacted</p>
+          </div>
+          <div class="MissionTwo">
+            <h3>850+</h3>
+            <p>Projects Completed</p>
+          </div>
+          <div class="MissionThree">
+            <h3>45</h3>
+            <p>Countries Served</p>
+          </div>
+          <div class="MissionFour">
+            <h3>$12M+</h3>
+            <p>Funds Raised</p>
+          </div>
+        </div>
+      </div>
     </section>
-    
-    <footer>
-        <p>&copy; 2025 Donation Platform. All rights reserved.</p>
-    </footer>
-</body>
-<script>
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-analytics.js";
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-database.js";
+    <!-- Your-Trust-end -->
+
+    <!-- Voices-start:: -->
+    <section id="VoiceHopeContainer">
+      <div class="subVoiceHope">
+        <h2>Voices of Hope and Change</h2>
+        <p>
+          Hear from the communities and families whose lives have been
+          transformed through our programs.
+        </p>
+      </div>
+
+      <div class="VoiceComment">
+        <!-- Card 1 -->
+        <div class="VoiceCard">
+          <p class="review-text">
+            This organization changed my community. We now have access to clean
+            water and our children are healthier than ever.
+          </p>
+          <div class="reviewer-meta">
+            <h4 class="reviewer-name">Sarah M.</h4>
+            <p class="reviewer-role">Community Leader</p>
+          </div>
+        </div>
+
+        <!-- Card 2 (Completed) -->
+        <div class="VoiceCard">
+          <p class="review-text">
+            The education program gave my daughter opportunities I never had.
+            She's now studying to become a teacher.
+          </p>
+          <div class="reviewer-meta">
+            <h4 class="reviewer-name">Michael T.</h4>
+            <p class="reviewer-role">Grateful Parent</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="VoiceCard">
+          <p class="review-text">
+            Their commitment to sustainable development is inspiring. They don't
+            just help, they empower communities.
+          </p>
+          <div class="reviewer-meta">
+            <h4 class="reviewer-name">Dr. Emily R.</h4>
+            <p class="reviewer-role">Healthcare Partner</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Voices-end:: -->
+
+    <!-- call-to-action-start:: -->
+    <section id="CallActionContainer">
+      <div class="callActionImage"></div>
+      <div class="callActionImageWriteUp">
+        <h2>Get in Touch to Spread Hope</h2>
+        <p>
+          Whether you want to donate, volunteer, or partner with us, we'd love
+          to hear from you. Together, we can create meaningful change and build
+          a better future for communities worldwide.
+        </p>
+        <a href="#" class="cta-btn">Contact Us</a>
+      </div>
+    </section>
+    <!-- call-to-action-end:: -->
+
+    <!--  -->
+    <div id="footer-placeholder"></div>
+
+    <script type="module" src="test2.js"></script>
+
+    <!-- fecth-Nav-start:: -->
+    <script >
+      
+const navData = document.getElementById("navbar-placeholder");
+const footerData = document.getElementById("footer-placeholder");
+
+fetch("navbar.html")
+    .then((response) => response.text())
+    .then((data) => {
+
+        navData.innerHTML = data;
+
+        initializeNavbar();
+
+    })
+    .catch((error) => {
+        console.error("Error loading navbar:", error);
+    });
+
+fetch("footer.html")
+    .then((response) => response.text())
+    .then((data) => {
+
+        footerData.innerHTML = data;
+
+    })
+    .catch((error) => {
+        console.error("Error loading footer:", error);
+    });
 </script>
-<script type="module" defer src="app.js"></script>
+    <!-- fecth-Nav-start:: -->
+  </body>
 </html>

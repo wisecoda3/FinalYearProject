@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar-start -->
+    <nav id="Navbar">
+      <div class="brandlogo"><span>💚HopeGiver</span></div>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul class="NavbarMenu">
+        <li class="navItems"><a href="index.html">Home</a></li>
+        <li class="navItems"><a href="about.html">About</a></li>
+        <li class="navItems"><a href="contact.html">Contact</a></li>
+        <li class="navItems"><a href="donate.html">Donate</a></li>
+        <li class="signin-dropdown">
+
+   <button id="accountBtn" class="dropdown-trigger">
+    Account ▼
+</button>
+
+    <div id="accountMenu" class="dropdown-menu auth-dropdown">
+
+        <div id="auth-section">
+
+            <p id="auth-status">
+                You are not signed in.
+            </p>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email">
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Password">
+
+            <button onclick="signIn()">
+                Sign In
+            </button>
+
+            <button onclick="signUp()">
+                Sign Up
+            </button>
+
+            <button
+                id="signOutBtn"
+                >
+
+                Sign Out
+
+            </button>
+
+        </div>
+
+    </div>
+
+</li>
+      </ul>
+    </nav>
+    <!-- Navbar-end -->
+     <script type="module" src="test2.js">
+
+    
+
+
+  </script>
+  </body>
+</html>

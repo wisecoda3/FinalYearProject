@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donation Platform</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="test2.css" />
+  <script
+      src="https://kit.fontawesome.com/32a5828b61.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+
+  <!-- Navbar-start:: -->
+    <div id="navbar-placeholder"></div>
+    <!-- Navbar-end:: -->
+    <!-- Hero-Page-start -->
+
+ 
+  
+  <!-- 🔐 Authentication Section -->
+  <!-- <div id="auth-section">
+    <p id="auth-status">You are not signed in.</p>
+
+    <input type="email" id="email" placeholder="Email" />
+    <input type="password" id="password" placeholder="Password" />
+    <div>
+    <button onclick="signUp()">Sign Up</button>
+    <button onclick="signIn()">Sign In</button>
+    <button id="signOutBtn" style="display: none;">Sign Out</button>
+  </div>
+  </div>
+
+  <hr /> -->
+
+  <!-- 💌 Donation Request Section -->
+   <div class="herosec">
+    <div class="herosecleft"><div class="bigtxtclass">Donate to Hopebridge.</div>
+    Join us in bringing hope, compassion, and opportunity to those who need it most. Together, we can create brighter futures, transform communities, and make a lasting difference in the world.
+  
+    <div class="buttonsec">
+  <a href="#requestList" class="commonbutton">Donate Now</a>
+  <a href="contact.html" class="commonbutton">Contact Us</a>
+</div>
+
+  </div>
+    
+    <!-- <h2>Helping those in need, one donation at a time.</h2> -->
+    <img src="assets/chilgimg.png" alt="" class="topimg"> 
+
+   </div>
+
+
+   <!-- <div class="aboutsec">
+    <div class="aboutsecleft">
+      About Us
+      <div class="bigtxtclass">Driven by Compassion, Committed to Change</div>
+
+      "At HOPE BRIDGE , we are dedicated to bringing hope, compassion, and opportunity to those who need it most. With your support, we can uplift lives, deliver essential resources, and open the door to brighter futures. Together, we can transform communities, empower individuals, and create lasting change that will resonate for generations to come.
+
+Through collaborative efforts, we focus on providing education, healthcare, and essential resources to those in need, empowering them to build sustainable futures.
+
+      <button class="commonbutton"> Learn More</button>
+    </div>
+    <div class="aboutsecright">
+
+    <div class="aboutsecrightimg1">
+      <img src="/assets/man1.jpg" alt="" class="abtsecimg"> 
+      <div class="abtbox"></div>
+    </div>
+
+
+    <div class="aboutsecrightimg2">
+      <img src="/assets/man2.jpg" alt="" class="abtsecimg"> 
+      <div class="abtbox"></div>
+    </div>
+
+  
+
+
+
+  </div>
+
+
+   </div> -->
+
+
+   
+
+<div class="ultrasubmitsec">
+
+  <div id="donation-request" style="display: none;" class="supersubmitsec">
+    <div class="submitsec">
+
+    <h2>Submit a Donation Request</h2>
+
+    <p>
+        Need financial assistance? Fill in the form below and your request
+        will be visible to donors.
+    </p>
+
+    <form id="requestForm">
+
+      <div class="input-grid">
+        <input type="text" id="requesterName" placeholder="Your Name" required />
+
+        <input type="text" id="requestReason" placeholder="Reason for Request" required />
+
+        <input type="number" id="requestAmount" placeholder="Amount Needed" required />
+
+</div>
+
+        <button class="prettyButton" type="submit">
+            Submit Request
+        </button>
+
+    </form>
+
+</div>
+  </div>
+
+</div>
+  
+
+  <!-- 📋 List of Requests -->
+    <h2>Requests</h2>
+  <div id="requestList">
+    <h2>Requests</h2>
+    <!-- Request cards will be added here -->
+  </div>
+
+  <!-- <div class="contactsec">
+    <div class="contactsectop">
+    Contact Us
+    <div class="bigtxtclass">Get in Touch to Spread Hope</div>
+
+  </div>
+
+
+
+    <div class="contactsecbtm">
+    <div class="contactsecleft">
+      
+      
+      <img src="/assets/kids smile.jpg" alt="" class="contactpic">
+
+      
+    </div>
+    <div class="contactsecright">
+
+      <div class="contactsecrighttop">
+
+      </div>
+
+        <form action="" class="contactsecrightbtm">
+
+          <div class="contactsecrightbtm">
+
+          <input type="text" id="contactsecinputshort" placeholder="First Name" required />
+          <input type="text" id="contactsecinputshort" placeholder="Second Name" required />
+          <input type="text" id="contactsecinputshort" placeholder="Phone Number" required />
+          <input type="text" id="contactsecinputshort" placeholder="Email" required />
+          <input type="number" id="contactsecinputlong" placeholder="Amount Needed" required />
+          <button type="submit" id="contactsecbtnlong">Submit Request</button>
+
+          
+            </div>
+
+        </form>
+
+
+
+
+  
+
+
+
+  </div>
+
+</div>
+
+
+   </div> -->
+   <!-- footer-start:: -->
+    <div id="footer-placeholder"></div>
+    <!-- footer-end:: -->
+   
+  <!-- 🔥 Import app logic as ES module -->
+  <script type="module" src="test2.js">
+
+
+  </script>
+  <!-- fecth-Nav-start:: -->
+    <script>
+const navData = document.getElementById("navbar-placeholder");
+const footerData = document.getElementById("footer-placeholder");
+
+// fetch("navbar.html")
+//     .then((response) => response.text())
+//     .then((data) => {
+
+//         navData.innerHTML = data;
+
+//         if (typeof window.initializeNavbar === "function") {
+//     window.initializeNavbar();
+// } else {
+//     console.error("initializeNavbar not loaded");
+// }
+
+//     })
+//     .catch((error) => {
+//         console.error("Error loading navbar:", error);
+//     });
+
+fetch("footer.html")
+    .then((response) => response.text())
+    .then((data) => {
+
+        footerData.innerHTML = data;
+
+    })
+    .catch((error) => {
+        console.error("Error loading footer:", error);
+    });
+</script>
+
+  <!-- Donation Modal -->
+<div id="donationModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close">&times;</span>
+
+        <h2>Donate</h2>
+
+        <h3 id="modalName"></h3>
+
+        <p id="modalReason"></p>
+
+        <div class="progress-container">
+            <div id="modalProgress" class="progress-bar"></div>
+        </div>
+
+        <p>
+
+          <!-- <div class="progress-container">
+    <div id="modalProgress" class="progress-bar"></div>
+</div> -->
+
+<p class="progress-text">
+    <span id="modalPercent">0%</span> Funded
+</p>
+
+          
+
+            Raised:
+            <strong>$<span id="modalRaised"></span></strong>
+            of
+            <strong>$<span id="modalGoal"></span></strong>
+        </p>
+
+        <p>
+            Remaining:
+            <strong>$<span id="modalRemaining"></span></strong>
+        </p>
+        <div class="input-group">
+
+    <label for="paymentMethod">Payment Method</label>
+
+    <select id="paymentMethod" required>
+    <option value="" selected disabled>
+        Select Payment Method
+    </option>
+
+    <option value="card">
+        💳 Card / Digital Wallet
+    </option>
+
+    <option value="bank">
+        🏦 Bank Account (Direct Debit)
+    </option>
+</select>
+
+</div>
+
+        <input
+            type="number"
+            id="modalDonationAmount"
+            placeholder="Enter donation amount"
+        >
+
+        <div class="modal-buttons">
+
+            <button id="cancelDonation">
+                Cancel
+            </button>
+
+            <button id="confirmDonation">
+                Donate
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>

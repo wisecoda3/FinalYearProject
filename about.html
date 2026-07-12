@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="test2.css" />
+    <script
+      src="https://kit.fontawesome.com/32a5828b61.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <!--My-💊-start::  -->
+    
+    <!--My-💊-end::  -->
+  </head>
+  <body>
+    <!-- Navbar-start:: -->
+    <div id="navbar-placeholder"></div>
+    <!-- Navbar-end:: -->
+
+    <!-- About-Hero-Page-start:: -->
+    <main id="AboutHeroPage">
+      <h1>About HopeGiver</h1>
+      <p>
+        For over 20 years, we've been transforming lives through compassion,
+        dedication, and sustainable development programs that empower
+        communities worldwide.
+      </p>
+    </main>
+    <!-- About-Hero-Page-end:: -->
+
+    <!-- Our-story-start:: -->
+    <section id="AboutStory">
+      <div class="aboutWriteUp">
+        <h3>Our Story</h3>
+        <p>
+          HopeGiver was founded in 2004 with a simple yet powerful mission: to
+          create lasting change in underserved communities around the world.
+          What started as a small grassroots initiative has grown into a global
+          movement impacting over 125,000 lives across 45 countries.
+        </p>
+        <p>
+          Our journey began when our founder, Sarah Johnson, witnessed firsthand
+          the lack of access to basic necessities in rural communities. Driven
+          by compassion and a commitment to make a difference, she assembled a
+          team of dedicated individuals who shared her vision.
+        </p>
+        <p>
+          Today, we continue to work alongside communities, not just providing
+          aid, but empowering people with the tools and resources they need to
+          build sustainable futures for themselves and generations to come.
+        </p>
+      </div>
+
+      <div class="aboutImage"></div>
+    </section>
+
+    <!-- Our-story-end:: -->
+
+    <!-- OurCore-start:: -->
+    <section id="OurCoreSection">
+      <div class="subscore">
+        <h3>Our Core Values</h3>
+        <p>
+          These principles guide everything we do and shape how we serve
+          communities around the world.
+        </p>
+      </div>
+
+      <div class="CoreContainer">
+        <div class="coreBox1">
+          <div class="icon-circle">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <h3>Compassion</h3>
+          <p>
+            We lead with empathy and understanding, putting the needs of
+            communities first.
+          </p>
+        </div>
+        <div class="coreBox2">
+          <div class="icon-circle">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <h3>Community</h3>
+          <p>
+            We believe in the power of working together to create lasting
+            change.
+          </p>
+        </div>
+        <div class="coreBox3">
+          <div class="icon-circle">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <h3>Impact</h3>
+          <p>
+            Every action we take is focused on creating measurable, sustainable
+            results.
+          </p>
+        </div>
+        <div class="coreBox4">
+          <div class="icon-circle">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <h3>Integrity</h3>
+          <p>
+            We operate with transparency and accountability in everything we do.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- OurCore-end:: -->
+
+    <!-- Our-Team-start:: -->
+    <section id="OurTeamSection">
+      <div class="subTeam">
+        <h3>Meet Our Team</h3>
+        <p>
+          Dedicated professionals committed to making a difference in
+          communities worldwide.
+        </p>
+      </div>
+
+      <div class="TeamContainer">
+        <div class="TeamCard1"></div>
+        <div class="TeamCard2"></div>
+        <div class="TeamCard3"></div>
+        <div class="TeamCard4"></div>
+      </div>
+    </section>
+    <!-- Our-Team-start:: -->
+
+    <!-- our-Mission-start -->
+    <section id="OurMissionSection">
+      <h3>Our Mission</h3>
+      <p>
+        "To empower underserved communities worldwide by providing access to
+        education, healthcare, clean water, and nutrition, creating sustainable
+        pathways out of poverty and building brighter futures for all."
+      </p>
+      <a href="#">Join Our Misson</a>
+    </section>
+
+    <!-- our-Mission-start -->
+
+    <!-- footer-start -->
+    <div id="footer-placeholder"></div>
+    <!-- footer-end -->
+     <script type="module" src="test2.js"></script>
+    <script>
+const navData = document.getElementById("navbar-placeholder");
+const footerData = document.getElementById("footer-placeholder");
+
+fetch("navbar.html")
+    .then((response) => response.text())
+    .then((data) => {
+
+        navData.innerHTML = data;
+
+        initializeNavbar();
+
+    })
+    .catch((error) => {
+        console.error("Error loading navbar:", error);
+    });
+
+fetch("footer.html")
+    .then((response) => response.text())
+    .then((data) => {
+
+        footerData.innerHTML = data;
+
+    })
+    .catch((error) => {
+        console.error("Error loading footer:", error);
+    });
+</script>
+  </body>
+</html>

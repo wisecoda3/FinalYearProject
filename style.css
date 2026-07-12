@@ -1,21 +1,1537 @@
-form {
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background: #f9f9f9;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+:root {
+  --bgcolor: rgb(255, 255, 255);
+  --bgcolor2: rgb(247, 244, 232);
+  --primary-green: #4caf50;
+  --icon-green: rgba(14, 195, 29, 0.75);
+  --card-bg: #ffffff;
+  --text-dark: #222222;
+  --text-muted: #555555;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+body {
+  scroll-behavior: smooth;
 }
 
-input, select, textarea, button {
+#Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 5%;
+  height: 50px;
+  background-color: #fff;
+  position: relative;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.NavbarMenu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItems > a,
+.dropdown-trigger {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+#accountBtn {
+     background: #1E3A5F;
+     height: 50px;
+    border: none;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+    padding: 0px 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#accountBtn:hover {
+  background: linear-gradient(to bottom, #dae3ed, #c6d8f1);
+  
+    color: #1E3A5F 
+}
+
+#accountBtn:focus {
+    outline: none;
+}
+
+#accountBtn:active {
+    transform: scale(0.98);
+}
+
+.signin-dropdown {
+  position: relative;
+  list-style: none;
+}
+
+.dropdown-menu{
+    display:none;
+    position:absolute;
+    top:100%;
+    right:0;
+
+    width:300px;
+
+    background:#fff;
+
+    border-radius:12px;
+
+    padding:20px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+
+    z-index:1000;
+}
+.dropdown-menu.show{
+    display:block;
+}
+
+#auth-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+#auth-section input{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    box-sizing:border-box;
+
+}
+#auth-section button{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    background:#6BBF8A;
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+#auth-section button:hover{
+
+    background:#5AA87A;
+
+}
+#auth-status{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:5px;
+
+    font-size:14px;
+
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu li a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* .dropdown-menu li a:hover {
+  background-color: #f1f1f1;
+} */
+
+/* .signin-dropdown:hover .dropdown-menu {
+  display: block;
+} */
+
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  transition: 0.3s;
+}
+
+#HeroPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  min-height: 90vh;
+  background-color: var(--bgcolor2, #f9f9f9);
+  padding: 2rem;
+}
+
+.HeroWriteUp {
+  width: 100%;
+  max-width: 584px;
+  height: auto;
+}
+
+.HeroImage {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-image: url(/assets/heroImg.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 10px solid white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.Join {
+  color: rgb(14, 195, 29);
+  background-color: rgb(232, 245, 233);
+  border-radius: 20px;
+  width: fit-content;
+  padding: 4px 12px;
+  font-weight: 500;
+}
+
+.HeroWriteUp > h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  padding-top: 1.5rem;
+  line-height: 1.2;
+}
+
+.HeroWriteUp > p {
+  font-weight: 300;
+  color: black;
+  margin-top: 1.5rem;
+  line-height: 1.6;
+}
+.buttons{
+  display: flex;
+}
+#DonateBtn {
+  border: none;
+  /* margin-top: 2rem; */
+  margin-right: 10px;
+  color: white;
+  background-color: rgb(14, 195, 29);
+  padding: 14px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+#LearnBtn {
+  border: 2px solid black;
+  padding: 12px 24px;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#DonateBtn:hover,
+#LearnBtn:hover {
+  opacity: 0.9;
+}
+.DriveSectionWriteUp {
+  margin-top: 5rem;
+}
+
+#DrivenSection {
+  display: flex;
+  margin: 2rem 4rem;
+  background-color: rgb(255, 255, 255);
+  gap: 40px;
+  align-items: center;
+}
+
+.DriveSectionImageContainer {
+  display: flex;
+  gap: 20px;
+}
+
+.DriveImage1 {
+  width: 284px;
+  height: 288px;
+  background: url(/assets/driveImage1.jpeg) no-repeat center / cover;
+}
+
+.DriveImage2 {
+  width: 284px;
+  height: 288px;
+  background: url(/assets/driveImage2.jpeg) no-repeat center / cover;
+}
+.DriveSectionWriteUp > h2 {
+  font-weight: 500;
+  font-size: 2rem;
+}
+.DriveSectionWriteUp > p {
+  line-height: 20px;
+  margin: 20px 0px 20px 0px;
+}
+
+#Program {
+  min-height: 100vh;
+  background-color: rgb(247, 244, 232);
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+.ProgramSubHead {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 10px 40px 10px;
+  text-align: center;
+}
+
+.ProgramSubHead > h2 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.ProgramSubHead > p {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.ProgramImageContainer {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.\👽 {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.\👽:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+}
+
+.ProgramImage1,
+.ProgramImage2,
+.ProgramImage3,
+.ProgramImage4 {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+
+.ProgramImage1 {
+  background: url(/ProgramImage1.jpeg) no-repeat center / cover;
+}
+.ProgramImage2 {
+  background: url(/ProgramImage2.jpeg) no-repeat center / cover;
+}
+.ProgramImage3 {
+  background: url(/ProgramImage3.jpeg) no-repeat center / cover;
+}
+.ProgramImage4 {
+  background: url(/ProgramImage4.jpeg) no-repeat center / cover;
+}
+
+.studeyicon {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.studeyicon .fa-book-open {
+  color: var(--icon-green);
+  font-size: 1.1rem;
+}
+
+.ProgramImageWriteUp {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+.ProgramImageWriteUp:empty::before {
+  content: "Program Details Coming Soon...";
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.ProgramImageWriteUp > h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.ProgramImageWriteUp > p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0 0 8px 0;
+}
+
+.ProgramImageWriteUp > span:nth-of-type(1) {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.ProgramImageWriteUp > span:nth-of-type(2) {
+  font-weight: 700;
+  color: var(--primary-green);
+  margin-left: 4px;
+}
+
+#progress {
+  width: 100%;
+  height: 8px;
+  accent-color: var(--primary-green);
+  border-radius: 4px;
+  border: none;
+  background-color: #e0e0e0;
+  margin: 4px 0 12px 0;
+}
+
+.ProgramImageWriteUp > a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--primary-green);
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  transition: color 0.2s ease;
+}
+
+.ProgramImageWriteUp > a:hover {
+  color: #388e3c;
+  text-decoration: underline;
+}
+#how-it-works{
+    background:#faf8ef;
+    padding:90px 8%;
+    text-align:center;
+}
+
+.section-header h2{
+    font-size:2.5rem;
+    color:#131313;
+    margin-bottom:15px;
+}
+
+.section-header p{
+    max-width:700px;
+    margin:0 auto 60px;
+    color:#666;
+    line-height:1.7;
+    font-size:1.05rem;
+}
+
+.steps-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.step-card{
+    background:white;
+    width:320px;
+    padding:35px 30px;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.step-card:hover{
+    transform:translateY(-8px);
+}
+
+.step-number{
+    width:60px;
+    height:60px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    background:#5f9ea0;
+    color:white;
+    font-size:1.6rem;
+    font-weight:bold;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.step-card h3{
+    color:#23395d;
+    margin-bottom:15px;
+}
+
+.step-card p{
+    color:#666;
+    line-height:1.7;
+}
+
+#OurMissionContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.OurMissionImage {
+  width: 50%;
+  max-width: 584px;
+  height: 400px;
+  border-radius: 12px;
+  background: url(/assets/ourMission-image.jpeg) no-repeat center / cover;
+}
+
+.OurMissionImageWriteUp {
+  width: 50%;
+  max-width: 584px;
+}
+
+.OurMissionImageWriteUp > h2 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+.OurMissionImageWriteUp > p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.OurMissionComplete {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 40px;
+}
+
+.MissionOne,
+.MissionTwo,
+.MissionThree,
+.MissionFour {
+  padding-left: 0;
+}
+
+.MissionOne > h3,
+.MissionTwo > h3,
+.MissionThree > h3,
+.MissionFour > h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #388e3c;
+  margin: 0 0 4px 0;
+}
+
+.MissionOne > p,
+.MissionTwo > p,
+.MissionThree > p,
+.MissionFour > p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+#VoiceHopeContainer {
+  background-color: rgb(247, 244, 232);
+  padding: 80px 20px;
+}
+
+.subVoiceHope {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+}
+
+.subVoiceHope > h2 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.subVoiceHope > p {
+  font-size: 1.05rem;
+  color: #555;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.VoiceComment {
+  display: grid;
+  /* Columns self-adjust perfectly, removing hardcoded widths */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.VoiceCard {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 40px 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.VoiceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.VoiceCard::before {
+  content: "“";
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  font-size: 5rem;
+  color: rgba(56, 142, 60, 0.15);
+  font-family: serif;
+  line-height: 1;
+}
+
+.review-text {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  font-style: italic;
+  margin: 0 0 24px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.reviewer-meta {
+  border-top: 1px solid #eeeeee;
+  padding-top: 15px;
+}
+
+.reviewer-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  margin: 0 0 4px 0;
+}
+
+.reviewer-role {
+  font-size: 0.85rem;
+  color: #388e3c;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+#CallActionContainer {
+  background-color: #388e3c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 80px 40px;
+}
+
+.callActionImage {
+  width: 50%;
+  max-width: 584px;
+  height: 389px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  background: url(/assets/ourMission-image.jpeg) no-repeat center / cover;
+}
+
+.callActionImageWriteUp {
+  width: 50%;
+  max-width: 530px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.callActionImageWriteUp > h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.callActionImageWriteUp > p {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #388e3c;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background-color: #f5f5f5;
+}
+
+#FooterSection {
+  background-color: rgb(17, 14, 40);
+  color: #ffffff;
+  padding: 80px 40px 40px 40px;
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 40px;
+  max-width: auto;
+  margin: 0 auto;
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  #FooterSection {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 60px 30px 30px;
+    gap: 30px;
+  }
+}
+
+/* Phones (375px and below) */
+@media (max-width: 480px) {
+  #FooterSection {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+    gap: 25px;
+    text-align: center;
+  }
+}
+
+/* Small phones (320px) */
+@media (max-width: 320px) {
+  #FooterSection {
+    padding: 30px 15px;
+    gap: 20px;
+  }
+}
+.footerinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.brandlogo span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.footerinfo > p {
+  font-size: 0.95rem;
+  color: #b3b3b3;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 320px;
+}
+
+#FooterSection h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  position: relative;
+}
+
+.footerQuickLink,
+.footerProgramm,
+.footerContact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footerQuickLink > a,
+.footerProgramm > a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 0.95rem;
+  align-self: flex-start;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footerQuickLink > a:hover,
+.footerProgramm > a:hover {
+  color: #4caf50;
+  transform: translateX(4px);
+}
+
+.footerContact > span {
+  font-size: 0.95rem;
+  color: #b3b3b3;
+  line-height: 1.4;
+}
+
+#AboutHeroPage {
+  background-color: #1a3a2a;
+  color: #ffffff;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 24px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#AboutHeroPage > h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0 0 1.25rem 0;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+#AboutHeroPage > p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 750px;
+  margin: 0;
+}
+
+#AboutStory {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.aboutImage {
+  width: 584px;
+  height: 874px;
+  background: url(/assets/driveImage2.jpeg) no-repeat center / cover;
+}
+#AboutStory {
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.aboutWriteUp {
+  flex: 1;
+  max-width: 550px;
+  padding-right: 20px;
+}
+
+.aboutWriteUp h3 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.aboutWriteUp p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.aboutImage {
+  flex-shrink: 0;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+#OurCoreSection {
+  padding: 5rem max(20px, 4%);
+  background: rgb(247, 244, 234);
+}
+
+.subscore {
+  text-align: center;
+  padding: 2rem 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.subscore > h3 {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.subscore > p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #2c3e50;
+  line-height: 1.5;
+}
+
+.CoreContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+[class^="coreBox"] {
+  flex: 1 1 260px;
+  max-width: 300px;
+  min-height: 260px;
+  background-color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 8px;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.icon-circle {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: rgb(234, 245, 233);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.icon-circle > .fa-heart {
+  color: #388e3c;
+  font-size: 1.5rem;
+}
+
+[class^="coreBox"] > h3 {
+  text-align: center;
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #1a252f;
+}
+
+[class^="coreBox"] > p {
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  color: #546e7a;
+}
+
+#OurTeamSection {
+  padding: 5rem max(20px, 4%);
+  background: #fff;
+}
+
+.subTeam {
+  text-align: center;
+  padding: 2rem 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.subTeam > h3 {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.subTeam > p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #2c3e50;
+  line-height: 1.5;
+}
+
+.TeamContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+[class^="TeamCard"] {
+  flex: 1 1 260px;
+  max-width: 280px;
+  height: 320px;
+  background-color: #333;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.TeamCard1 {
+  background-image: url("/assets/driveImage1.jpeg");
+}
+
+.TeamCard2 {
+  background-image: url("/assets/driveImage2.jpeg");
+}
+
+.TeamCard3 {
+  background-image: url("/assets/heroImg.jpeg");
+}
+
+.TeamCard4 {
+  background-image: url("/assets/ourMission-image.jpeg");
+}
+
+#OurMissionSection {
+  padding: 6rem max(20px, 5%);
+  background-color: rgb(123, 180, 66);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  max-width: auto;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+#OurMissionSection > h3 {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 700;
+  color: #1a252f;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+#OurMissionSection > p {
+  font-size: clamp(1.1rem, 3vw, 1.35rem);
+  font-weight: 400;
+  line-height: 1.7;
+  color: white;
+  font-style: italic;
+  margin-bottom: 2.5rem;
+}
+
+#OurMissionSection > a {
+  display: inline-block;
+  padding: 0.85rem 2.2rem;
+  background-color: #388e3c;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 50px;
+  box-shadow: rgba(56, 142, 60, 0.2) 0px 4px 12px;
+  transition: all 0.3s ease;
+}
+
+#OurMissionSection > a:hover {
+  background-color: #2e7d32;
+  transform: translateY(-2px);
+  box-shadow: rgba(56, 142, 60, 0.35) 0px 6px 20px;
+}
+
+#ContactSection {
+  padding: 5rem max(20px, 5%);
+  background-color: #fff;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  max-width: auto;
+  margin: 0 auto;
+}
+
+#FormInput {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: rgba(99, 99, 99, 0.15) 0px 4px 16px;
+}
+
+#FormInput > h3 {
+  font-size: 1.8rem;
+  color: #1a252f;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+#FormInput form {
+  display: flex;
+  flex-direction: column;
+}
+
+#FormInput label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+#FormInput input[type="text"],
+#FormInput input[type="email"],
+#FormInput textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #cfd8dc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fafafa;
+  box-sizing: border-box;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+#FormInput input:focus,
+#FormInput textarea:focus {
+  outline: none;
+  border-color: #388e3c;
+  background-color: #ffffff;
+  box-shadow: rgba(56, 142, 60, 0.1) 0px 0px 0px 4px;
+}
+
+#FormInput textarea {
+  min-height: 140px;
+  resize: none;
+  /* resize: vertical; */
+  margin-bottom: 0.5rem;
+}
+
+#ContactInfo {
+  padding: 1rem;
+}
+
+#ContactInfo > h3 {
+  font-size: 1.8rem;
+  color: #1a252f;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+#ContactInfo > p {
+  font-size: 1rem;
+  color: #546e7a;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.officeaddress,
+.phonenumber,
+.emailaddress {
+  margin-bottom: 1.75rem;
+}
+
+.officeaddress > h3,
+.phonenumber > h3,
+.emailaddress > h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #388e3c;
+  margin-bottom: 0.4rem;
+}
+
+.officeaddress > p,
+.phonenumber > p,
+.emailaddress > p {
+  font-size: 1rem;
+  color: #2c3e50;
+  line-height: 1.5;
+}
+
+
+#FormInput input[type="submit"] {
+  background-color: #388e3c; 
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.85rem 2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+  width: 100%; 
+  box-sizing: border-box;
+  transition: all 0.25s ease-in-out;
+  box-shadow: rgba(56, 142, 60, 0.15) 0px 4px 12px;
+}
+
+
+#FormInput input[type="submit"]:hover {
+  background-color: #2e7d32; 
+  box-shadow: rgba(56, 142, 60, 0.3) 0px 6px 16px;
+  transform: translateY(-1px);
+}
+
+#FormInput input[type="submit"]:active {
+  transform: translateY(1px); 
+}
+
+@media (max-width: 1024px) {
+  #AboutStory {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .aboutWriteUp {
+    padding-right: 0;
+    max-width: 100%;
+  }
+
+  .aboutImage {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+    max-width: 500px;
+    height: 450px;
+  }
 }
 
-.request-card {
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin: 10px 0;
-    background: #fff;
+@media (max-width: 992px) {
+  /* Switches the section to a column layout and centers content */
+  #DrivenSection {
+    flex-direction: column;
+    margin: 2rem 2rem; /* Reduced horizontal margin for smaller screens */
+    text-align: center;
+  }
+
+  .DriveSectionWriteUp {
+    margin-top: 2rem; /* Reduced top margin on tablets/mobile */
+  }
+
+  #HeroPage {
+    flex-direction: column-reverse;
+    text-align: center;
+    justify-content: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .Join {
+    margin: 0 auto;
+  }
+
+  .HeroImage {
+    max-width: 350px;
+  }
+  #OurMissionContainer {
+    flex-direction: column; /* Stack image on top of text */
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .OurMissionImage,
+  .OurMissionImageWriteUp {
+    width: 100%; /* Stretch to take full content width safely */
+    max-width: 600px;
+  }
+
+  .OurMissionImage {
+    height: 320px; /* Slightly shorter image height on tablet devices */
+  }
+
+  #VoiceHopeContainer {
+    padding: 60px 20px;
+  }
+
+  #CallActionContainer {
+    flex-direction: column; /* Stack image on top of text */
+    text-align: center;
+    padding: 60px 24px;
+    gap: 35px;
+  }
+
+  .callActionImage,
+  .callActionImageWriteUp {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .callActionImageWriteUp {
+    align-items: center; /* Center the button on mobile/tablet viewports */
+  }
+
+  .callActionImage {
+    height: 320px; /* Reduces container height on mid-sized screens */
+  }
+}
+
+@media (max-width: 900px) {
+  #ContactSection {
+    /* Collapse down to 1 column layout on tablets and mobile screens */
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 3.5rem 24px;
+  }
+
+  #FormInput {
+    padding: 2rem 1.5rem; /* Slightly tighter internal padding on smaller displays */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Ensures the two fixed-width images scale down on smaller phones instead of clipping */
+  .DriveImage1,
+  .DriveImage2 {
+    width: 100%;
+    max-width: 284px;
+    height: auto;
+    aspect-ratio: 284 / 288; /* Maintains the original block proportion */
+  }
+
+  .DriveSectionImageContainer {
+    width: 100%;
+    justify-content: center; /* Centers the images on mobile */
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .NavbarMenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 20px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+    text-align: center;
+    z-index: 9;
+  }
+
+  .menu-toggle:checked ~ .NavbarMenu {
+    display: flex;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    background-color: #f9f9f9;
+  }
+
+  .ProgramSubHead {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .ProgramSubHead > h2 {
+    font-size: 1.8rem;
+  }
+
+  .subVoiceHope > h2 {
+    font-size: 1.85rem;
+  }
+  .callActionImageWriteUp > h2 {
+    font-size: 2rem; /* Drop heading size down for smaller profiles */
+  }
+
+  #AboutHeroPage {
+    min-height: 40vh; /* Reduces global panel proportions on compact tablet systems */
+    padding: 50px 20px;
+  }
+
+  #AboutHeroPage > h1 {
+    font-size: 2.5rem; /* Downscales bold heading layout elegantly */
+  }
+
+  #AboutHeroPage > p {
+    font-size: 1.05rem; /* Highly legible paragraphs across medium screens */
+  }
+  #OurCoreSection {
+    padding: 3.5rem 20px; /* tighter padding on mobile */
+  }
+
+  .CoreContainer {
+    gap: 16px;
+  }
+
+  [class^="coreBox"] {
+    flex: 1 1 100%; /* Spans full width on small mobile if needed, matching max-width constraints */
+    max-width: 340px;
+  }
+
+  #OurTeamSection {
+    padding: 3.5rem 20px;
+  }
+
+  .TeamContainer {
+    gap: 16px;
+  }
+
+  [class^="TeamCard"] {
+    /* Ensures neat layout cards on smaller modern phones */
+    flex: 1 1 100%;
+    max-width: 300px;
+  }
+
+  #OurMissionSection {
+    padding: 4.5rem 24px;
+  }
+
+  #OurMissionSection > p {
+    margin-bottom: 2rem;
+  }
+
+  #OurMissionSection > a {
+    width: 100%; /* Spans full width organically on small viewports if necessary */
+    max-width: 280px;
+    box-sizing: border-box;
+  }
+}
+
+/* Extra optimization for very small mobile screens */
+@media (max-width: 480px) {
+  #DrivenSection {
+    margin: 2rem 1rem; /* Even smaller margins for tiny screens */
+  }
+
+  .DriveSectionImageContainer {
+    flex-direction: column; /* Stacks the two images on top of each other if the screen is too narrow */
+    align-items: center;
+  }
+
+  /* Add this for mobile screens */
+  .OurMissionComplete {
+    grid-template-columns: 1fr; /* Switch stats to a single column stack on tiny phones */
+    gap: 20px;
+  }
+
+  .OurMissionImageWriteUp > h2 {
+    font-size: 1.75rem; /* Scale down heading font size slightly */
+  }
+
+  .OurMissionImage {
+    height: 240px; /* Compact image height for mobile viewports */
+  }
+
+  .VoiceComment {
+    grid-template-columns: 1fr; /* Rigid stack for small mobile layout */
+    gap: 20px;
+  }
+
+  #CallActionContainer {
+    padding: 50px 16px;
+  }
+
+  .callActionImage {
+    height: 240px; /* Compact desktop asset scale down for tiny phone screens */
+  }
+
+  .cta-btn {
+    width: 100%; /* Make button full width on small phones for easy thumbs-tapping */
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  #AboutHeroPage {
+    padding: 40px 16px;
+  }
+
+  #AboutHeroPage > h1 {
+    font-size: 2rem; /* Maximum readable size boundary for compact mobile viewports */
+    margin-bottom: 1rem;
+  }
+
+  #AboutHeroPage > p {
+    font-size: 0.95rem; /* Optimized layout tracking for mobile screens */
+    line-height: 1.5;
+  }
 }
