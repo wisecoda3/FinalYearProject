@@ -1,7 +1,7 @@
 /* styles.css */
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: serif;
     margin: 0;
     padding: 0;
     background: #f8f3e4;
@@ -58,9 +58,9 @@ body {
   }
 
   .prettyButton {
-    background: linear-gradient(to bottom, #ffffff, #f4f7fb);
-    color: #1E3A5F;
-    border: 2px solid #1E3A5F;
+    background: linear-gradient(to bottom, #ffffff, #f2f9f4);
+    color: #1B5E20;
+    border: 2px solid #1B5E20;
     padding: 10px 20px;
     border-radius: 8px;
     font-size: 15px;
@@ -70,7 +70,7 @@ body {
 }
 
 .prettyButton:hover {
-    background: #1E3A5F;
+    background: #1B5E20;
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(30, 58, 95, 0.25);
@@ -125,7 +125,7 @@ body {
   
   .request-card button {
     margin-top: 0px;
-    background: #28a745;
+    background: #1B5E20;
   }
   
   
@@ -704,6 +704,11 @@ body {
     margin-bottom:20px;
 
 }
+.requesttitile{
+  display: flex;
+  justify-content: center;
+  padding-top: 5vh;
+}
 
 .request-card{
 
@@ -792,7 +797,7 @@ body {
 
     margin-top:0px;
 
-       background:#6BBF8A;
+       background:#1B5E20;
 
     color:white;
 
@@ -913,7 +918,7 @@ body {
 
     border-radius:12px;
 
-    background:#63C47D;
+    background:#1B5E20;
 
     color:white;
 
@@ -938,12 +943,7 @@ font-weight:500;
 
     height:8px;
 
-       background:linear-gradient(
-        90deg,
-        #6BBF8A,
-        #8FD3A8
-    );
-
+       background:#1B5E20;
     margin:-25px -25px 20px -25px;
 
     border-radius:18px 18px 0 0;
